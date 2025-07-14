@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+# Personal Portfolio Website - A. Mohamed Abul Hassan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website built with React and Tailwind CSS featuring a sleek black theme design.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Modern Black Theme**: Fully black-themed design with white typography and subtle accent colors
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Smooth Navigation**: Vertical sidebar navigation (desktop) and collapsible mobile navbar
+- **Interactive Components**: Hover effects, transitions, and smooth scrolling
+- **Professional Sections**:
+  - Hero section with introduction and call-to-action buttons
+  - About me with statistics
+  - Skills with progress bars and categorization
+  - Featured projects with tech stacks
+  - Professional certifications
+  - Work experience timeline
+  - Achievements and awards
+  - Contact form with social links
+  - Clean footer
 
-### `npm start`
+## 🛠️ Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React 19.1.0
+- **Styling**: Tailwind CSS 3.4.17
+- **Icons**: React Icons (Font Awesome + Simple Icons)
+- **Fonts**: Poppins and Inter from Google Fonts
+- **Build Tool**: Create React App
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Installation & Setup
 
-### `npm test`
+1. **Clone the repository**:
+   ```bash
+   git clone <your-repo-url>
+   cd portfolio-website
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Open your browser** and navigate to `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🎨 Customization
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Personal Information
+Update the following files with your information:
+- `src/components/Hero.js` - Name, tagline, and social links
+- `src/components/About.js` - Personal description and statistics
+- `src/components/Contact.js` - Contact details and social links
+- `src/components/Footer.js` - Footer information
 
-### `npm run eject`
+### Skills & Projects
+- `src/components/Skills.js` - Add/modify your technical skills
+- `src/components/Projects.js` - Update with your projects
+- `src/components/Experience.js` - Add your work experience
+- `src/components/Achievements.js` - List your achievements
+- `src/components/Certifications.js` - Add your certifications
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Theme Customization
+Tailwind colors are defined in `tailwind.config.js`:
+```javascript
+colors: {
+  'black-primary': '#000000',
+  'black-secondary': '#111111', 
+  'gray-accent': '#333333',
+  'white-text': '#ffffff',
+  'gray-text': '#cccccc',
+}
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📱 Mobile Responsiveness
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Desktop**: Fixed left sidebar navigation
+- **Mobile**: Collapsible top navigation bar
+- **Responsive breakpoints**: Tailwind CSS standard breakpoints
+- **Touch-friendly**: Optimized button sizes and spacing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Deployment
 
-## Learn More
+### Build for Production
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Deploy to Netlify
+1. Build the project: `npm run build`
+2. Upload the `build` folder to Netlify
+3. Configure domain (optional)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Deploy to Vercel
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run: `vercel`
+3. Follow the prompts
 
-### Code Splitting
+## 📄 Resume Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To add your resume download functionality:
+1. Place your PDF resume in the `public` folder as `resume.pdf`
+2. The "Download Resume" button in the Hero section will automatically work
 
-### Analyzing the Bundle Size
+## 🎯 Performance Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Smooth Scrolling**: CSS scroll-behavior and JavaScript intersection observers
+- **Optimized Images**: Placeholder gradients for project previews
+- **Lazy Loading**: React components load efficiently
+- **Responsive Design**: Mobile-first approach
 
-### Making a Progressive Web App
+## 🐛 Troubleshooting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Common Issues:
 
-### Advanced Configuration
+1. **Icons not displaying**: Make sure `react-icons` is installed
+2. **Styles not applying**: Verify Tailwind CSS is properly configured
+3. **Build errors**: Check all imports and dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Development Commands:
 
-### Deployment
+```bash
+# Start development server
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Run tests
+npm test
 
-### `npm run build` fails to minify
+# Build for production
+npm run build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Eject (advanced users only)
+npm run eject
+```
+
+## 📧 Contact
+
+A. Mohamed Abul Hassan
+- Email: mohammedabulhassan298@gmail.com
+- Phone: +91 9342161322
+- LinkedIn: [mohammedabulhassan298](https://linkedin.com/in/mohammedabulhassan298)
+- GitHub: [mohammedabulhassan298](https://github.com/mohammedabulhassan298)
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Built with ❤️ using React & Tailwind CSS**

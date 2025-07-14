@@ -1,5 +1,137 @@
+/* Global Styles for Dark Theme and Glassmorphism */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: #fff;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Glow Hover Effect */
+.glow-hover:hover {
+  box-shadow: 0 0 15px rgba(147, 0, 211, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Button Styles */
+.button {
+  padding: 12px 24px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.button-glow {
+  background: linear-gradient(145deg, #8700b3, #600080);
+  color: #fff;
+}
+
+.button-glow:hover {
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+}
+
+/* Large Heading with Gradient Text */
+.heading-gradient {
+  background: linear-gradient(90deg, #e66465, #9198e5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Scroll animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes glowPulse {
+  0% { opacity: 0.4; transform: scale(1); }
+  100% { opacity: 0.8; transform: scale(1.1); }
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.nav-item {
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #e66465;
+  transform: translateY(-2px);
+}
+
+/* Component floating animation */
+.animate-float {
+  animation: componentFloat 8s ease-in-out infinite;
+}
+
+@keyframes componentFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(0.5deg); }
+  50% { transform: translateY(-4px) rotate(0deg); }
+  75% { transform: translateY(-12px) rotate(-0.5deg); }
+}
+
+/* Staggered animation delays */
+.animate-float-delay-1 {
+  animation: componentFloat 8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-float-delay-2 {
+  animation: componentFloat 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-float-delay-3 {
+  animation: componentFloat 8s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.animate-float-delay-4 {
+  animation: componentFloat 8s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+/* Subtle pulsing animation for interactive elements */
+.animate-pulse-gentle {
+  animation: pulseGentle 4s ease-in-out infinite;
+}
+
+@keyframes pulseGentle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
 }
 
 .App-logo {
@@ -34,5 +166,99 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* 3D Anime Divider Line */
+.divider-3d {
+  width: 100% !important;
+  height: 8px !important;
+  background: #ff1744 !important; /* Fallback solid color */
+  background: linear-gradient(90deg, 
+    #ff1744 0%, 
+    #ff758c 25%, 
+    #ff7eb3 50%, 
+    #9b59b6 75%, 
+    #ff1744 100%
+  ) !important;
+  position: relative !important;
+  margin: 50px auto !important;
+  border-radius: 15px !important;
+  box-shadow: 
+    0 0 40px rgba(255, 23, 68, 0.9),
+    0 0 80px rgba(255, 117, 140, 0.7),
+    0 0 120px rgba(255, 126, 179, 0.5),
+    0 0 160px rgba(155, 89, 182, 0.3) !important;
+  animation: animeLine 2s ease-in-out infinite !important;
+  z-index: 100 !important;
+  max-width: 90% !important;
+  filter: brightness(1.5) !important;
+  /* Ensure visibility */
+  min-height: 8px !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.divider-3d::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 23, 68, 0.8) 10%, 
+    rgba(255, 117, 140, 0.8) 25%, 
+    rgba(255, 126, 179, 0.8) 40%, 
+    rgba(155, 89, 182, 0.8) 50%, 
+    rgba(255, 126, 179, 0.8) 60%, 
+    rgba(255, 117, 140, 0.8) 75%, 
+    rgba(255, 23, 68, 0.8) 90%, 
+    transparent 100%
+  );
+  border-radius: 15px;
+  filter: blur(6px);
+  animation: animeLine 2s ease-in-out infinite reverse;
+}
+
+.divider-3d::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 150px;
+  background: radial-gradient(ellipse, 
+    rgba(255, 23, 68, 0.3) 0%, 
+    rgba(255, 117, 140, 0.2) 30%, 
+    rgba(255, 126, 179, 0.1) 60%, 
+    transparent 100%
+  );
+  border-radius: 50%;
+  animation: pulseGlow 1.5s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes animeLine {
+  0%, 100% { 
+    transform: scaleX(1) scaleY(1);
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  50% { 
+    transform: scaleX(1.05) scaleY(1.3);
+    filter: hue-rotate(90deg) brightness(1.2);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { 
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.3);
   }
 }
