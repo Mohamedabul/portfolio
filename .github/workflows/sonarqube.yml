@@ -23,7 +23,7 @@ jobs:
       run: npm install
 
     - name: Build React project
-      run: npm start
+      run: npm run build
 
     - name: Set up JDK 17
       uses: actions/setup-java@v3
