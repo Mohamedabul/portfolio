@@ -37,9 +37,10 @@ jobs:
         projectBaseDir: .
         args: >
           -Dsonar.projectKey=D1D
-          -Dsonar.projectName=React Portfolio
+          -Dsonar.projectName="D1D"
           -Dsonar.sources=src
           -Dsonar.sourceEncoding=UTF-8
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
