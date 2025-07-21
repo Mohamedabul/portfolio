@@ -37,8 +37,10 @@ jobs:
         projectBaseDir: .
         args: >
           -Dsonar.projectKey=D1D
-          -Dsonar.projectName=portfolio
+          -Dsonar.projectName=React Portfolio
+          -Dsonar.sources=src
           -Dsonar.sourceEncoding=UTF-8
+          -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
