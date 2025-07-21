@@ -39,6 +39,8 @@ jobs:
           -Dsonar.projectKey=D1D
           -Dsonar.projectName="D1D"
           -Dsonar.sources=src
+          -Dsonar.host.url=http://localhost:9000 
+          -Dsonar.token=sqp_b5e9d6dcc1b9446bd1c34f4b8e7e35a49a3b8d8c
           -Dsonar.sourceEncoding=UTF-8
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
