@@ -12,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-<section id="hero" className="min-h-screen flex flex-col items-center justify-center text-center pt-16 lg:pt-0 relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex flex-col items-center justify-center text-center pt-20 lg:pt-0 relative overflow-hidden">
       {/* Background 3D Model */}
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full opacity-70">
@@ -24,38 +24,38 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/30 z-1"></div>
 
       {/* Hero content container - positioned to left to avoid 3D model quote */}
-      <div className="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col lg:flex-row items-center justify-between min-h-screen">
-        <div className="text-center lg:text-left max-w-2xl lg:max-w-xl bg-black/20 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/10 lg:mr-8">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10 flex flex-col lg:flex-row items-center justify-between min-h-screen">
+        <div className="text-center lg:text-left max-w-full sm:max-w-2xl lg:max-w-xl bg-black/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/10 lg:mr-8 w-full lg:w-auto">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
             <span className="text-white drop-shadow-lg">Mohamed Abul Hassan A</span>
           </h1>
           
-          <div className="mb-8">
-            <p className="text-lg lg:text-xl text-gray-200 mb-4 font-medium drop-shadow-md">
+          <div className="mb-6 sm:mb-8">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-200 mb-3 sm:mb-4 font-medium drop-shadow-md">
               AI Enthusiast | Open Source Contributor | Problem Solver
             </p>
-            <p className="text-base lg:text-lg text-gray-300 leading-relaxed drop-shadow-md">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed drop-shadow-md">
               Final-year AI & DS student passionate about solving real-world problems using deep learning, NLP, and generative AI.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
+          <div className="flex flex-col gap-4 justify-center lg:justify-start items-center mb-6 sm:mb-8">
             <button
               onClick={handleDownloadResume}
-              className="bg-white text-black flex items-center space-x-2 px-8 py-4 rounded-lg font-semibold hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              className="bg-white text-black flex items-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-auto text-sm sm:text-base"
             >
-              <FaDownload className="w-5 h-5" />
+              <FaDownload className="w-4 h-4 sm:w-5 sm:h-5" />
               <span>Download Resume</span>
             </button>
             
-            <div className="flex space-x-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
               <a
                 href="https://github.com/Mohamedabul"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-white text-white flex items-center space-x-2 px-6 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105"
+                className="border border-white text-white flex items-center justify-center space-x-2 px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base"
               >
-                <FaGithub className="w-5 h-5" />
+                <FaGithub className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>GitHub</span>
               </a>
               
@@ -63,9 +63,9 @@ const Hero = () => {
                 href="https://www.linkedin.com/in/mohamed-abul-hassan/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-white text-white flex items-center space-x-2 px-6 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105"
+                className="border border-white text-white flex items-center justify-center space-x-2 px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base"
               >
-                <FaLinkedin className="w-5 h-5" />
+                <FaLinkedin className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>LinkedIn</span>
               </a>
             </div>

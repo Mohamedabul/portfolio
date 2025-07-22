@@ -68,40 +68,40 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20">
-      <div className="container mx-auto px-6 lg:px-12">
-        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-white-text">
+    <section id="skills" className="py-12 sm:py-16 lg:py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 text-white-text">
           Skills & Technologies
         </h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="group bg-black-primary rounded-lg border border-gray-accent hover:border-white transition-all duration-300 overflow-hidden">
-              <div className="p-8">
+              <div className="p-4 sm:p-6 lg:p-8">
                 {/* Header */}
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gray-accent rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300">
-                    <span className="w-3 h-3 bg-white rounded-full"></span>
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-accent rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300">
+                    <span className="w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full"></span>
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-2xl font-bold text-white-text group-hover:text-white transition-colors duration-200">
+                  <div className="ml-3 sm:ml-4">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white-text group-hover:text-white transition-colors duration-200">
                       {category.title}
                     </h3>
                   </div>
                 </div>
 
                 {/* Skills */}
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {category.skills.map((skill, skillIndex) => {
                     const Icon = skill.icon;
                     return (
                       <div key={skillIndex} className="group">
                         <div className="flex items-center justify-between mb-2">
-                          <div className="flex items-center space-x-3">
-                            <Icon className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-200" />
-                            <span className="text-gray-text font-medium">{skill.name}</span>
+                          <div className="flex items-center space-x-2 sm:space-x-3">
+                            <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform duration-200" />
+                            <span className="text-gray-text font-medium text-sm sm:text-base">{skill.name}</span>
                           </div>
-                          <span className="text-gray-text text-sm">{skill.level}%</span>
+                          <span className="text-gray-text text-xs sm:text-sm">{skill.level}%</span>
                         </div>
 
                         <div className="w-full bg-gray-800 rounded-full h-2">
